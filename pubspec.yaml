@@ -30,5 +30,7 @@ flutter:
   assets:
     - images/
 
-
-
+  fonts:
+  - family: NewTegomin
+    fonts:
+    - asset: fonts/NewTegomin-Regular.ttf
