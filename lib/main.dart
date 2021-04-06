@@ -48,7 +48,7 @@ class _PictureState extends State<Picture> {
   @override
   Widget build(BuildContext context) {
     return SafeArea(
-      child: Container(
+      child: Center(
         child: Row(
           children: <Widget>[
             Expanded(
@@ -56,7 +56,7 @@ class _PictureState extends State<Picture> {
                 onPressed: () {
                   cheese();
                 },
-                child: Image.asset('images/animal$picFrame'),
+                child: Image.asset('images/animal$picFrame.jpg'),
               ),
             ),
           ],
