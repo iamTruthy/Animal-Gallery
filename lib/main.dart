@@ -1,5 +1,6 @@
 import 'dart:math';
 import 'package:flutter/material.dart';
+import 'package:audioplayers/audio_cache.dart';
 
 void main() {
   runApp(MyApp());
@@ -55,6 +56,8 @@ class _PictureState extends State<Picture> {
               child: TextButton(
                 onPressed: () {
                   cheese();
+                  final player = AudioCache();
+                  player.play('flip.wav');
                 },
                 child: Image.asset('images/animal$picFrame.jpg'),
               ),

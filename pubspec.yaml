@@ -31,6 +31,8 @@ flutter:
   assets:
     - images/
 
+    - sounds/
+
   fonts:
   - family: NewTegomin
     fonts:
