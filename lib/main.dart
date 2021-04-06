@@ -47,18 +47,20 @@ class _PictureState extends State<Picture> {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      child: Row(
-        children: <Widget>[
-          Expanded(
-            child: TextButton(
-              onPressed: () {
-                cheese();
-              },
-              child: Image.asset('images/animal$picFrame'),
+    return SafeArea(
+      child: Container(
+        child: Row(
+          children: <Widget>[
+            Expanded(
+              child: TextButton(
+                onPressed: () {
+                  cheese();
+                },
+                child: Image.asset('images/animal$picFrame'),
+              ),
             ),
-          ),
-        ],
+          ],
+        ),
       ),
     );
   }
