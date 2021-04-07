@@ -49,45 +49,43 @@ class _PictureState extends State<Picture> {
   @override
   Widget build(BuildContext context) {
     return SafeArea(
-      child: Center(
-        child: Row(
-          children: <Widget>[
-            Expanded(
-              child: TextButton(
+      child: Column(
+        children: <Widget>[
+            Image(
+              width: 450,
+              image:AssetImage ('images/animal$picFrame.jpg'),
+            ),
+            
+          
+          
+          Expanded(
+            child: Align(
+              alignment: Alignment.bottomRight,
+              child: ElevatedButton(
+                child: Text('Next'),
                 onPressed: () {
-                  print('flip');
                   cheese();
                   final player = AudioCache();
                   player.play('flip.wav');
+                  print('elevated');
                 },
-                child: Image.asset('images/animal$picFrame.jpg'),
-              ),
-            ),
-            Expanded(
-              child: Align(
-                alignment: Alignment.bottomLeft,
-                child: ElevatedButton(
-                  child: Text('Name'),
-                  onPressed: () {
-                    print('elevated');
-                  },
-                  style: ElevatedButton.styleFrom(
-                    shape: RoundedRectangleBorder(),
-                    primary: Colors.brown,
-                    padding: EdgeInsets.symmetric(
-                      horizontal: 25,
-                      vertical: 20,
-                    ),
-                    textStyle: TextStyle(
-                      fontSize: 30,
-                      fontWeight: FontWeight.bold,
-                    ),
+                style: ElevatedButton.styleFrom(
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(20),
+                  ),
+                  primary: Colors.brown,
+                  padding: EdgeInsets.symmetric(
+                    horizontal: 10,
+                    vertical: 5,
+                  ),
+                  textStyle: TextStyle(
+                    fontSize: 30,
                   ),
                 ),
               ),
-            )
-          ],
-        ),
+            ),
+          )
+        ],
       ),
     );
   }
