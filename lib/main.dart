@@ -51,40 +51,43 @@ class _PictureState extends State<Picture> {
     return SafeArea(
       child: Column(
         children: <Widget>[
-            Image(
-              width: 450,
-              image:AssetImage ('images/animal$picFrame.jpg'),
+          Padding(
+            padding: const EdgeInsets.fromLTRB(10,10,10,20),
+            child: Image(
+              width: 400,
+              image: AssetImage('images/animal$picFrame.jpg'),
             ),
-            
-          
+          ),
           
           Expanded(
             child: Align(
               alignment: Alignment.bottomRight,
-              child: ElevatedButton(
-                child: Text('Next'),
+              child: FloatingActionButton(
+                child: Icon(Icons.arrow_forward_ios_rounded),
                 onPressed: () {
                   cheese();
                   final player = AudioCache();
                   player.play('flip.wav');
-                  print('elevated');
                 },
-                style: ElevatedButton.styleFrom(
-                  shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(20),
-                  ),
-                  primary: Colors.brown,
-                  padding: EdgeInsets.symmetric(
-                    horizontal: 10,
-                    vertical: 5,
-                  ),
-                  textStyle: TextStyle(
-                    fontSize: 30,
+                  backgroundColor: Colors.brown,
                   ),
                 ),
               ),
+    
+      
+
+          Expanded(
+            child: Align(
+              alignment: Alignment.bottomLeft,
+                child: FloatingActionButton(
+                  onPressed: () {
+
+                  },
+                  child: Icon(Icons.arrow_back_ios_rounded),
+                  backgroundColor: Colors.brown,
+                ),
+              ),
             ),
-          )
         ],
       ),
     );
